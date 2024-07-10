@@ -1,6 +1,6 @@
-#Google Cloude Certified Professional Cloud Architect.
+# Google Cloude Certified Professional Cloud Architect.
+Google Cloud Certified Professional Cloud Architect Study Notes
 
-Flashcards for the GCP Professional Exam
 
 - [Anthos](/anthos.md)
 - [App Engine](/app_engine.md)

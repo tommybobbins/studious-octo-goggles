@@ -1,8 +1,4 @@
-# studious-octo-goggles
-Google Cloud Certified Professional Cloud Architect Study Notes
-
-
-## Entity Types
+# Entity Types
 
 |Entity|Notes|
 |---|---|
