@@ -1,4 +1,4 @@
-# Google Cloude Certified Professional Cloud Architect.
+# Google Cloud Certified Professional Cloud Architect.
 Google Cloud Certified Professional Cloud Architect Study Notes
 
 
