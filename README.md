@@ -25,13 +25,17 @@ GPUs are not available in all regions,
 - Instance templates are the equivalent of an AMI.
 - Instance Groups are ASGs, Autoscaling, Autohealing, Load balancing.
 
+### Instance template
+
+Description of a Virtual Machine, Machine Type, Confidential Computing, Security, Container, Operating System, Boot disk, Networking, Tenancy.
+
 ### Stateless Managed instance Group
 
-Stateless managed instance groups consist of ephemeral disks + managed data. Commonly used for Web backends or batch processing.
+Collection of Virtual machines managed as a unit, autoscaling, autohealing, load balancing, autoupdating. Created from an Instance template. Stateless managed instance groups consist of ephemeral disks + managed data. Commonly used for Web backends or batch processing.
 
 ### Stateful Managed instance group
 
-Stateful policy, the disks are stateful. The configuration is per instance, with *no scaling*. Commonly used for databases. Template Instance + Stateful Policy + Persistence Config = Instance.
+Stateful policy, the disks are stateful, autoscaling, autohealing, load balancing, autoupdating. The configuration is per instance.  Commonly used for databases. Template Instance + Stateful Policy + Persistence Config = Instance.
 
 ### Unmanaged instance group
 
