@@ -1,19 +1,4 @@
-# studious-octo-goggles
-Google Cloud Certified Professional Cloud Architect Study Notes
-
-
-## Entity Types
-
-|Entity|Notes|
-|---|---|
-|Organization|Root level structure, automatically created. Google Workspace Super Admins are granted the ability to create IAM roles.|
-|Folders|Logically arrange Projects into Folders (Nested OU equivalent in AWS)|
-|Projects|Projects can exist inside Folders or not|
-|Resources|GCP Resouces exist inside a Project|
-
-Billing accounts have a payment profile associated with them in a single currency. A Project and it's service level resources are linked to one Cloud Billing Account at a time. A single billing account can be responsible for multiple Projects.
-
-## Compute 
+# Compute 
 
 GPUs are not available in all regions, 
 - A2 NVIDIA A100 GPU
@@ -68,39 +53,3 @@ Installs fluent-bit and opentelemetry configured to push logs and metrics respec
 ### TPUs
 
 VMs can be created which contain TPUs, (associated with Tensorflow). Lower precision floating point operations compared to GPU. Deep learning does not necessarily require high precision of a GPU. TPU version software is a dropdown option when building a Cloud TPU. Pre-emptibility is a must, which means that the cost can be reduced by a factore of 4 (but can be reclaimed by Google at any time).
-
-## Kubernetes
-
-### Standard GKE Cluster
-
-- Pay per resources (Nodes + Control Plane)
-- User Configured Resources
-- User Configured Autoscaling
-- Regional or Zonal
-
-### Autopilot
-
-- Google Managed Control plane + Nodes.
-- Pay per Pod (nodes sized based on Pod requests).
-- Built in Security
-- Regional only
-
-### Public versus Private
-
-VPC-Native cluster
-
-Subnet ranges 
-- Primary subnet range for node IPs (each node gets /24)
-- Pod IP address range (each node can run 110 pods)
-- Service IP address range 
-
-#### Public clusters
-
-Control plane and nodes are accessible over the internet. Worker nodes can be protected using firewall rules.
-
-#### Private clusters
-
-Better, cannot connect to nodes. Public and Private endpoint for the cluster endpoint. Must specify a /28. The 
-
-- User VPC Network contains the nodes.
-- Google Managed VPC Network - contains the control plane with a transparent VPC peering connection to the user VPC network with the nodes. If you are using a Private cluster, be careful of connecting to the controlplane via another VPC because of transiting rules.
