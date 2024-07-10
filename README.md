@@ -31,15 +31,19 @@ Description of a Virtual Machine, Machine Type, Confidential Computing, Security
 
 ### Stateless Managed instance Group
 
-Collection of Virtual machines managed as a unit, autoscaling, autohealing, load balancing, autoupdating. Created from an Instance template. Stateless managed instance groups consist of ephemeral disks + managed data. Commonly used for Web backends or batch processing.
+Collection of Virtual machines managed as a unit, autoscaling, autohealing, load balancing, autoupdating. Created from an Instance template. Stateless managed instance groups consist of ephemeral disks + managed data. Commonly used for Web backends or batch processing. Multi-zonal is possible. Predictive autoscaling option. Cool down period, scale in controls. Health check (e.g. TCP, 80, check interval, timeout, thresholds)
 
 ### Stateful Managed instance group
 
-Stateful policy, the disks are stateful, autoscaling, autohealing, load balancing, autoupdating. The configuration is per instance.  Commonly used for databases. Template Instance + Stateful Policy + Persistence Config = Instance.
+Stateful policy, the disks are stateful, *no autoscaling*, autohealing, load balancing, autoupdating. The configuration is per instance.  Commonly used for databases, legacy apps. Template Instance + Stateful Policy (how disks are configured) + Per-instance config = Instance. Predictive autoscaling option. Cool down period, scale in controls. Health check (e.g TCP,80, check intervals, timeout, thresholds)
+
+#### Stateful Configuration
+
+Disks are listed for making instances stateful, on permanent instance deletion, detach or delete the disk.
 
 ### Unmanaged instance group
 
-This has no instance template, no scaling and is generally associated with legacy clusters.
+Heterogeneous,  has no instance template, no autoscaling, no rolling update support and is generally associated with legacy clusters. Does support load balancing.
 
 ### Confidential VM Overview and Security Features
 
@@ -64,3 +68,40 @@ Installs fluent-bit and opentelemetry configured to push logs and metrics respec
 ### TPUs
 
 VMs can be created which contain TPUs, (associated with Tensorflow). Lower precision floating point operations compared to GPU. Deep learning does not necessarily require high precision of a GPU. TPU version software is a dropdown option when building a Cloud TPU. Pre-emptibility is a must, which means that the cost can be reduced by a factore of 4 (but can be reclaimed by Google at any time).
+
+## Kubernetes
+
+### Standard GKE Cluster
+
+- Pay per resources (Nodes + Control Plane)
+- User Configured Resources
+- User Configured Autoscaling
+- Regional or Zonal
+
+### Autopilot
+
+- Google Managed Control plane + Nodes.
+- Pay per Pod (nodes sized based on Pod requests).
+- Built in Security
+- Regional only
+
+### Public versus Private
+
+VPC-Native cluster
+
+Subnet ranges 
+- Primary subnet range for node IPs (each node gets /24)
+- Pod IP address range (each node can run 110 pods)
+- Service IP address range 
+
+#### Public clusters
+
+Control plane and nodes are accessible over the internet. Worker nodes can be protected using firewall rules.
+
+#### Private clusters
+
+Better, cannot connect to nodes. Public and Private endpoint for the cluster endpoint. Must specify a /28. The Control plane is a VPC Peer connection, be wary of VPC transit.
+
+- User VPC Network
+
+- Google Managed VPC Network
