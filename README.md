@@ -2,8 +2,10 @@
 Google Cloud Certified Professional Cloud Architect Study Notes
 
 
-- [Anthos](/anthos.md)
-- [App Engine](/app_engine.md)
-- [Compute](/compute.md)
-- [Kubernetes](/kubernetes.md)
-- [Organisations](/org.md)
+- [Anthos](anthos.md)
+- [App Engine](app_engine.md)
+- [Compute](compute.md)
+- [Kubernetes](kubernetes.md)
+- [Organisations](org.md)
+- [Data Storage][data.md]
+- [Cloud Functions][cloud_functions.md]
