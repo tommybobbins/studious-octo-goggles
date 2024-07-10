@@ -57,3 +57,6 @@ Installs fluent-bit and opentelemetry configured to push logs and metrics respec
 |SSD | SSD, higher cost, best price per IOPS|15000/9000| Regional & Zonal |
 |Extreme | NVME | >=500GB, highest write throughput| 60K IOPS| Zonal Only (120K IOPS) |
 
+### TPUs
+
+VMs can be created which contain TPUs, (associated with Tensorflow). Lower precision floating point operations compared to GPU. Deep learning does not necessarily require high precision of a GPU. TPU version software is a dropdown option when building a Cloud TPU. Pre-emptibility is a must, which means that the cost can be reduced by a factore of 4 (but can be reclaimed by Google at any time).
