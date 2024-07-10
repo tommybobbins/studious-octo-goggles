@@ -19,14 +19,30 @@ GPUs are not available in all regions,
 - A2 NVIDIA A100 GPU
 - N1 Intel Skylake
 
-Reservations are reserved instances.
-Preemptible VMs are equivalent to Spot instances in the AWS world.
+- Reservations are reserved instances.
+- Preemptible VMs are equivalent to Spot instances in the AWS world.
+- It is possible to block SSH keys project wide.
+- Instance templates are the equivalent of an AMI.
+- Instance Groups are ASGs, Autoscaling, Autohealing, Load balancing.
 
-### Confidentials VM Overview
+### Stateless Managed instance Group
+
+Stateless managed instance groups consist of ephemeral disks + managed data. Commonly used for Web backends or batch processing.
+
+### Stateful Managed instance group
+
+Stateful policy, the disks are stateful. The configuration is per instance, with *no scaling*. Commonly used for databases. Template Instance + Stateful Policy + Persistence Config = Instance.
+
+### Unmanaged instance group
+
+This has no instance template, no scaling and is generally associated with legacy clusters.
+
+### Confidential VM Overview and Security Features
 
 Memory encrypted with keys which reside in dedicated hardware, not available to the hypervisor.
 Attestation - verify the state of the VM to ensure key componenents haven't been tampered with.
 Known as _Trusted Execution Environment_
+Can also use Shielded VMs - Secure Boot [], TPM (Measured Boot) [], Integrity monitoring.
 
 ### Ops Agent on VM Instances
 
@@ -40,3 +56,4 @@ Installs fluent-bit and opentelemetry configured to push logs and metrics respec
 |Balanced|Higher cost| 3000/3000 | Regional & Zonal |
 |SSD | SSD, higher cost, best price per IOPS|15000/9000| Regional & Zonal |
 |Extreme | NVME | >=500GB, highest write throughput| 60K IOPS| Zonal Only (120K IOPS) |
+
