@@ -46,9 +46,8 @@ Policies and Configurations for clusters which apply across clusters. Anthos Con
 
 ## Anthos Service Mesh
 
-## Anthos clusters, Ingress for Anthos
+A Service Mesh controls how parts of an application communicate and share data. It's a dedicated infrastructure layer. Requests to servcies are routed through sidecars. Proxies implement policies to support a service (e.g security or logging)
 
-## Anthos clusters
--Google Cloud
-
+Microservices do not need to implement these features, just deploy the Anthos service mesh.
+It is based on Istio, provides for traffic management, observability and security.
 
