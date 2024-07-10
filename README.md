@@ -100,8 +100,7 @@ Control plane and nodes are accessible over the internet. Worker nodes can be pr
 
 #### Private clusters
 
-Better, cannot connect to nodes. Public and Private endpoint for the cluster endpoint. Must specify a /28. The Control plane is a VPC Peer connection, be wary of VPC transit.
+Better, cannot connect to nodes. Public and Private endpoint for the cluster endpoint. Must specify a /28. The 
 
-- User VPC Network
-
-- Google Managed VPC Network
+- User VPC Network contains the nodes.
+- Google Managed VPC Network - contains the control plane with a transparent VPC peering connection to the user VPC network with the nodes. If you are using a Private cluster, be careful of connecting to the controlplane via another VPC because of transiting rules.
