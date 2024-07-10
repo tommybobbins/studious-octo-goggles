@@ -13,6 +13,7 @@ Google Cloud Certified Professional Cloud Architect Study Notes
 - [Cloud Spanner](cloud_spanner.md)
 - [Big Table](big_table.md)
 - [Cloud SQL](cloud_sql.md)
+- [Cloud Dataproc](cloud_dataproc.md)
 - [Firebase](firebase.md)	
 - [Firestore](firestore.md)
 - [NoSQL Overview](nosql.md)
