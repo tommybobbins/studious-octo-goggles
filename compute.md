@@ -53,3 +53,18 @@ Installs fluent-bit and opentelemetry configured to push logs and metrics respec
 ### TPUs
 
 VMs can be created which contain TPUs, (associated with Tensorflow). Lower precision floating point operations compared to GPU. Deep learning does not necessarily require high precision of a GPU. TPU version software is a dropdown option when building a Cloud TPU. Pre-emptibility is a must, which means that the cost can be reduced by a factore of 4 (but can be reclaimed by Google at any time).
+
+
+## Encryption at rest
+
+- Encoding data that cannot be converted back to the original form.
+- Keys are used with encryption algorithms to create encrypted data
+- AES256 used on all hardware
+- Data is grouped into chunks and AES256 encryption
+- Data chunks are encrypted with it's own data encryption key.
+- Data encryption key is encrypted with a key encryption key (CMK or GMK). This prevents data blocks from being needed to be re-encrypted when the CMK or GMK key is rotated.
+
+## Encryption in transit
+
+All data is authenticated but not encrypted inside the VPC. ALTS is used.
+On public internet all traffic is encrypted.

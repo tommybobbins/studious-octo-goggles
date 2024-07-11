@@ -35,6 +35,7 @@ Google Cloud Certified Professional Cloud Architect Study Notes
 - [Obervability](observability.md)
 - [Designing for Scale](designing_for_scale.md)
 - [Migrations](migrations.md)
+- [Managing Keys](keys.md)
 
 CloudDataProcOops
 CloudDataFlowBeam
