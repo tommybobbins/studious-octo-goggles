@@ -1,5 +1,8 @@
 # VPC Service Controls
 
+Create security perimeters around GPC services. They compleement IAM. Mitigates the risk of data exfiltration.
+
+
 Used for sensitive data
  - Clients with privileged access don't have access to partner resources
  - Clients with access to sensitive data, only need to read.
@@ -8,6 +11,7 @@ Used for sensitive data
  - Data exfiltration by insiders or compromised cost.
  - Supports most GCloud services including Cloud Storage (non-VPC). 
  - Should be used as a go to for proecting sensitive data from Internal users.
+ - Can extend perimeters to on-premise networks.
 
 ## How does it work? 
 
