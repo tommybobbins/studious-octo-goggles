@@ -13,13 +13,18 @@ Google Cloud Certified Professional Cloud Architect Study Notes
 - [Cloud Spanner](cloud_spanner.md)
 - [Big Table](big_table.md)
 - [Cloud SQL](cloud_sql.md)
-- [Cloud Dataproc](cloud_dataproc.md)
-- [Cloud Dataflow](cloud_dataflow.md)
+- [Cloud Dataproc](cloud_dataproc.md) - Hadoop/Spark
+- [Cloud Dataflow](cloud_dataflow.md) - Complex ETL/ELT based on Apache Beam
+- [Cloud Datafusion](cloud_datafusion.md) -  Simple ETL/ELT GUI based on CDAP
 - [Cloud Memorystore](cloud_memorystore.md)
 - [Cloud PubSub](cloud_pubsub.md)
+- [Cloud Composer](cloud_composer.md) - Apache Airflow
+- [Cloud Workflows](cloud_workflows.md) - Business APIs
 - [Firebase](firebase.md)	
 - [Firestore](firestore.md)
 - [NoSQL Overview](nosql.md)
 - [Cloud Storage](cloud_storage.md)
 - [VPC Service Controls](vpc_service_controls.md)
 - [VertexAI](vertex_ai.md)
+- [Deployment Manager](deployment_maanger.md)
+
