@@ -210,6 +210,45 @@ Row level policy is applied to the table.
 CREATE ROW ACCESS POLICY <name> ON <table> GRANT TO <group> FILTER USING (Region="US");
 ````
 
+The following roles may still be able to access/infer the data with Row level security:
+
+- Project Owner or Project creator ( Audit logs, create new projects)
+- BigQuery Data Edit, Owner, Viewer (View error messages on queries)
+- BigQuery Stackdriver metrics/Monitoring viewer roles (bytes processed and related data)
+- Cloud Billing viewer permission (view BigQuery billing)
+
 ## BigQuery ML
 
+Support for Machine Learning in SQL. Several kinds of models
+
+- Linear Regression.
+- Binary and Multiclass logistic regressions.
+- K-means clustering.
+- Time series forecast.
+- Matrix factorization.
+- Boosted tree and XGBoost
+- Tensorflow (imported)
+- AutoML tables (let the algorithm decide)
+
+Why do this in BigQuery, labelled observations, training sets, test sets. ML, Prediction model. Accuracy stats.
+
+### CREATE MODEL Options
+
+- Model type
+- Input Label columns
+- Regularization
+- Learning rate
+- Early stop
+- Standardize features
+- Max Tree depth
+
+Evaluate - apply test data.
+Predict 
+
 ## BigQuery BI Engine
+
+Fast in memory analysis service. Big Query data stored in memory up to 100GB/project/location and 10GB/table.
+Optimises data movement between BI Engine in-memory storage.
+Integrates with popular BI tools through SQL interface. (including data studio)
+Uses Vectorized runtime inside the BigQuery API, metadata.
+Low latency querying over small amounts of data. 
