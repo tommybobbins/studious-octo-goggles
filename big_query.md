@@ -84,6 +84,6 @@ Tables can be divided into segments called partitions. This improves query perfo
 
 - Partition by ingestion time - daily date based partition. Ingestion time determines partition. A pseudo column is created _PARTITIONTIME which is a date based timestamp. Can reference this in queries
 - Partition based on date or timestamp column. Each partition holds one time unit of data.  _NULL_ is created in partition column when nulls in partition column. _UNPARTITIONED when values in column are outside the range.
-- Integer range partitioning
+- Integer range partitioning - use separate column with integery value. Specify, start and end of the range. Interval is one of those items in the range. Values which fall outside the range fall into the UNPARTITIONED partition.
 
 
