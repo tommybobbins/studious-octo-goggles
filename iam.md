@@ -51,3 +51,27 @@ Collection of logical descriptions of who has what type of access.
  - Viewer - readonly actions which don't modify the state.
 
  Try not to use outside of development environments.
+
+ ### Predefined and Custom Roles
+
+Roles are mapped to a common set of privileges. Use predefined roles where possible as best practice. Can base a custom role on a predefined role if it is too broad/narrow. 
+
+### Cloud IAM Conditions
+
+Use additional attribute based access controls. Grant access to members only if condtions are met.
+- Conditions are specified in role bindings
+- Conditions are specified using CEL (Common Expression Language). Effectively create a boolean test
+- Used by Bigtable, CKMS, Compute Engine, IAProxy, Resource Manager, Secret Manager.
+ 
+### Service Accounts
+
+- Avoid adding service accounts to groups.
+- Do not use identities
+- Are both a principal and a resource, so can be impersonated.
+
+
+### Best practice
+
+- Auditing - use logs from cloud audit logs to audit changes to IAM policies.
+- Export audit logs to cloud storage.
+- Manage access to logs using logging roles.

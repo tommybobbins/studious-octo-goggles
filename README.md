@@ -8,6 +8,7 @@ Google Cloud Certified Professional Cloud Architect Study Notes
 - [Kubernetes](kubernetes.md)
 - [Organisations](org.md)
 - [Data Storage](data.md)
+- [Data loss prevention](dlp.md)
 - [Cloud Functions](cloud_functions.md)
 - [Big Query](big_query.md)
 - [Cloud Spanner](cloud_spanner.md)
@@ -29,6 +30,11 @@ Google Cloud Certified Professional Cloud Architect Study Notes
 - [VertexAI](vertex_ai.md)
 - [Deployment Manager](deployment_maanger.md)
 - [IAM](iam.md)
+- [Identity Aware Proxy](iap.md)
+- [Workload Identity Federation](wif.md)
+- [Obervability](observability.md)
+- [Designing for Scale](designing_for_scale.md)
+- [Migrations](migrations.md)
 
 CloudDataProcOops
 CloudDataFlowBeam
