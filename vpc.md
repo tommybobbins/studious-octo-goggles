@@ -22,8 +22,6 @@ VPC is a private cloud / cloud datacentre and is globally available.
 
 Careful creating VPC and automatic and custom modes as it will populate all the regions with subnets. 
 
-## VPC Peering
-
 ## Shared VPCs
 
 Common resources from multiple projects to a common VPC network. There is a host project and a service project. Generally they need to be in the same Organization. Exception is during a migration.
@@ -34,6 +32,20 @@ Two sharing options -
 - Alternatively define which subnets to share. New subnets will not be shared by default
 
 Can specify the shared subnets that can be accessed and this complements the IAM access controls.
+
+## VPC Network Peering
+
+Advantages over External IPs or VPNs- it has lower latency and no exposure to public internet.
+In addition, using external addressing incurs ingress.
+
+- Allows for internal address connectivity between VPCs.
+- Does not have to be in the same organisation.
+- Useful when you have multiple administrative domains, e.g. SaaS customers.
+
+- Works with Compute, GKE and App Engine Flexible.
+- Peered networks are configured independently. 
+- Up to 25 VPCs.
+- Has the same latency and throughput as private network in same network.
 
 ## Cloud Router (BGP and non-Google networks) and Network peering
 
@@ -57,7 +69,28 @@ Dynamic Routing modes
 
 ## Cloud Armor
 
-Protects against DOS/DDOS
+Protects against DOS/DDOS. It is made up of a WAF at Layer 7. ML driven adaptive protection. OWASP.
+
+- L7 filtering.
+- Policies, IP, IP Range, Request Headers.
+- Needs a load balancer to function.
+- Cloud Armor is at the edge of the network at the PoP.
+
+*Only available for services behind an HTTP/S load balancer*
 
 ## Cloud NAT
    
+Network Address Translation provides outbound access to the internet for non-external IP'd devices.
+- Cloud NAT is not a single device (NAT Proxy).
+- Cloud Router provides the control plane for Cloud NAT.
+- Can scale the number of addresses. It does not reduce network bandwidth.
+- Allows outbound connection and inbound connections in response (related).
+- No unsolicited inbound.
+
+
+## Private Service Connect
+
+Private consumption of resources across VPC networks.
+- Define IP addresses for Google APIs/Services/Services in your own VPC
+- Private Service Connect Endpoint
+Access Service provider in another VPC (e.g. your own API endpoints in another VPC)
