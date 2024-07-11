@@ -3,10 +3,10 @@
 This is based on CDAP, is a managed service uses a GUI Tool for ETL/ELT. Loading data into data warehouse.
 
 - Drag and Drop interface
-- 160 Pre-prepared Transformations
+- 160 Pre-prepared Transformation
 
-Has 3 tiers:
+It is deployed as an Instance and has 3 tiers:
 
-- Developer
-- Basic (Visual designer)
-- Enterprise (Streaming Pipelines, Integration, Metadata, HA, Triggers, Schedules)
+- Developer (Limited resources, Visual designer)
+- Basic, SDK, Transformations
+- Enterprise (Streaming Pipelines, Integration with Metadata, HA, Triggers, Schedules)
