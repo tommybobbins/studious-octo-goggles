@@ -85,5 +85,28 @@ Tables can be divided into segments called partitions. This improves query perfo
 - Partition by ingestion time - daily date based partition. Ingestion time determines partition. A pseudo column is created _PARTITIONTIME which is a date based timestamp. Can reference this in queries
 - Partition based on date or timestamp column. Each partition holds one time unit of data.  _NULL_ is created in partition column when nulls in partition column. _UNPARTITIONED when values in column are outside the range.
 - Integer range partitioning - use separate column with integery value. Specify, start and end of the range. Interval is one of those items in the range. Values which fall outside the range fall into the UNPARTITIONED partition.
+- Can set partitioning as a required filter at the table level. This requires a WHERE calues with the partition column.
 
+## Date/Timestamp partitioning versus Sharding
 
+Sharding can be used as follows:
+
+- Use separate tables for each day.
+- TABLE_NAME_PREFIX_YYMMDD
+- Use Union in queries to scan multiple tables.
+
+Partitioning is preferred over sharding because there is less metadata to maintain, less permission checks across the unions and better performance.
+
+## Clustered tables
+
+Use clustering when we need more granuality than partitioning provides. Commonly used filters or aggregations against the cluster columnns. If the cluster column has a high cardinality (many different values). When partition leads to less than 1GB per partition, use clustering.
+
+- Data is sorted based on values in one or more columns.
+- Can improve performance of aggregate queries.
+- Can reduce scanning when cluster columns are used in the WHERE clause.
+
+## Automatic Reclustering
+
+- As new data is added to a table, data may be stored out of order
+- BigQuery automically re-clusters in the background.
+- For partitioned tables that use clustering, clustering is maintained within each partition.
