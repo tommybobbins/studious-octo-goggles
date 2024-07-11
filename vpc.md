@@ -94,3 +94,54 @@ Private consumption of resources across VPC networks.
 - Define IP addresses for Google APIs/Services/Services in your own VPC
 - Private Service Connect Endpoint
 Access Service provider in another VPC (e.g. your own API endpoints in another VPC)
+
+## Cloud VPN
+
+- Uses IPSec VPN, traffic is encrypted
+- Classic (99.9%, single IP, static or BGP) or HA VPN (99.99%, two external IPs, BGP only)
+
+## Cloud Interconnect and Direct Peering
+
+### Cloud Interconnect
+
+- Extends on premise network to Google Cloud
+- High availability, low latency.
+- Dedicated and Partner.
+
+Dedicated is a direct physical connection between on-prem and Google's network. Large volume of data. Typically less expensive than purchasing more bandwidth. It is hosted in a common co-location facility where Google has a presence.
+
+Partner interconnect - telecom provider has connection to colo, allows on-premise to Google via the partners network.
+
+## Direct Peering
+
+Peering connection between your network and Google's network. Exists outside of Google Cloud. Is often used when accessing Google workspace applications. Recommended way to connect to Google Cloud is with a Dedicated Interconnect or Partner Interconnect not using Direct Peering.
+
+## Cloud CDN
+
+Global distribution of content, optimised for last mile performance. Serve content closest to the user. It is built on External HTTPs load balancing.
+
+### Load balancing
+
+- Regional or
+- Global load balancing (all external). Premium tier networking
+- External or
+- Internal
+- Traffic Type
+- Network service tier (High performance networking versus standard, uses Google's network)
+- Standard tier uses public internet.
+
+### Global load balancers
+ - External HTTPs.
+ - TCP Proxy. - External
+ - SSL Proxy (for non HTTPS traffic). - External
+
+### Regtional load balancers
+
+- Internal HTTPs
+- Internal UDP/TCP
+- External UDP/TCP
+
+## Service directory
+
+Publish, discover and connect to services in the cloud. Changes are tracked, manual addresses don't need adding to DNS.
+

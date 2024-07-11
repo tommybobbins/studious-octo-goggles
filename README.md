@@ -28,6 +28,7 @@ Google Cloud Certified Professional Cloud Architect Study Notes
 - [VPC Service Controls](vpc_service_controls.md)
 - [VertexAI](vertex_ai.md)
 - [Deployment Manager](deployment_maanger.md)
+- [IAM](iam.md)
 
 CloudDataProcOops
 CloudDataFlowBeam
