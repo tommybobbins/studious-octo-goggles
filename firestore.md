@@ -40,3 +40,33 @@ Related entities known as Kinds (compare to a table)
 - Zero or more sort orders to sequence the results.
 
 Once firestore is written to, the mode (Native=Mobile; Datastore=Server) cannot be changed.
+
+
+## Indexes
+
+- Indexes are *mandatory* for all queries because there are no scans.
+- Can be single field or composite
+- Some indexes are automatically created, atomic values, ascending and descending. Maps and arrays also get created too.
+
+## Composite Index
+
+- Index multiple fields
+- Not automatically created, manual
+- Used when querying and filtering using multiple attributes.
+
+Any time you attempt a query not supported by an index, Firestore returns an error message with a link that you can follow to create the missing index.
+
+## Limitations
+
+- Queries with range filters on different fields are not supported.
+- != operator *is supported*: https://cloud.google.com/firestore/docs/concepts/index-overview, https://cloud.google.com/firestore/docs/concepts/index-overview
+
+## Transactions
+
+Transactions are supported in Firestore.
+
+- Serializable Isolation - Data being written cannot be read within the transaction.
+- Can specify a read-only transaction which can be faster.
+- Max duration of 270 seconds, 60 seconds idle. 
+- Can modify 500 entities in a single transaction.
+-  Resource limits, concurrency or internal error can lead to transactions failing.
