@@ -12,5 +12,6 @@ Decoupling applications, making them asynchronous.
 ````
 Publisher->Message->Topic->Subscription->Message
                     Topic->Message Storage
-                           Subscription->Message<-Subscriber->Ack to Subscription when done.
+                           Subscription->Message<-Subscriber->Ack
+                                <-----------------------------Ack
 ````
