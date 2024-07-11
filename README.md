@@ -15,6 +15,7 @@ Google Cloud Certified Professional Cloud Architect Study Notes
 - [Cloud SQL](cloud_sql.md)
 - [Cloud Dataproc](cloud_dataproc.md)
 - [Cloud Memorystore](cloud_memorystore.md)
+- [Cloud PubSub](cloud_pubsub.md)
 - [Firebase](firebase.md)	
 - [Firestore](firestore.md)
 - [NoSQL Overview](nosql.md)
