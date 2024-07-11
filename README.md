@@ -24,7 +24,13 @@ Google Cloud Certified Professional Cloud Architect Study Notes
 - [Firestore](firestore.md)
 - [NoSQL Overview](nosql.md)
 - [Cloud Storage](cloud_storage.md)
+- [VPC](vpc.md)
 - [VPC Service Controls](vpc_service_controls.md)
 - [VertexAI](vertex_ai.md)
 - [Deployment Manager](deployment_maanger.md)
 
+CloudDataProcOops
+CloudDataFlowBeam
+CloudDataFusionDAP
+CloudWorkflowsApe
+CloudComposerAirflow
