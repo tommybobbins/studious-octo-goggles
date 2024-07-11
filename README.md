@@ -22,3 +22,4 @@ Google Cloud Certified Professional Cloud Architect Study Notes
 - [NoSQL Overview](nosql.md)
 - [Cloud Storage](cloud_storage.md)
 - [VPC Service Controls](vpc_service_controls.md)
+- [VertexAI](vertex_ai.md)
