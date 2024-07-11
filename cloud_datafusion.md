@@ -1,6 +1,6 @@
 # Cloud DataFusion
 
-This is based on CDAP, uses a GUI Tool for ETL/ELT. 
+This is based on CDAP, is a managed service uses a GUI Tool for ETL/ELT. Loading data into data warehouse.
 
 - Drag and Drop interface
 - 160 Pre-prepared Transformations
