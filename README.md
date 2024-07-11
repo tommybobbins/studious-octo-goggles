@@ -14,6 +14,7 @@ Google Cloud Certified Professional Cloud Architect Study Notes
 - [Big Table](big_table.md)
 - [Cloud SQL](cloud_sql.md)
 - [Cloud Dataproc](cloud_dataproc.md)
+- [Cloud Dataflow](cloud_dataflow.md)
 - [Cloud Memorystore](cloud_memorystore.md)
 - [Cloud PubSub](cloud_pubsub.md)
 - [Firebase](firebase.md)	
