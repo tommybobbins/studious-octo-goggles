@@ -40,8 +40,8 @@ Google Cloud Certified Professional Cloud Architect Study Notes
 
 ## MNEMONIC
 
-- CloudDataProcOops
-- CloudDataFlowBeam
-- CloudDataFusionDAP
-- CloudWorkflowsApe
-- CloudComposerAirflow
+- CloudDataProcOops (CDPOOPS)
+- CloudDataFlowBeam (CDFBEAM)
+- CloudDataFusionDAP (CDFUCDAP)
+- CloudWorkflowsAPI (CWFSAPI)
+- CloudComposerApacheAirflow (CCAA)
