@@ -1,9 +1,10 @@
 # Google Cloud Certified Professional Cloud Architect.
 Google Cloud Certified Professional Cloud Architect Study Notes
 
+## TOPICS
 
-- [Anthos](anthos.md)
-- [App Engine](app_engine.md)
+- [Anthos](anthos.md) - Global cross cloud/premise scaling for Kubernetes clusters.
+- [App Engine & Cloud Run](app_engine.md)
 - [Compute](compute.md)
 - [Kubernetes](kubernetes.md)
 - [Organisations](org.md)
@@ -37,8 +38,10 @@ Google Cloud Certified Professional Cloud Architect Study Notes
 - [Migrations](migrations.md)
 - [Managing Keys](keys.md)
 
-CloudDataProcOops
-CloudDataFlowBeam
-CloudDataFusionDAP
-CloudWorkflowsApe
-CloudComposerAirflow
+## MNEMONIC
+
+- CloudDataProcOops
+- CloudDataFlowBeam
+- CloudDataFusionDAP
+- CloudWorkflowsApe
+- CloudComposerAirflow
