@@ -35,3 +35,7 @@ Originally limited to language specific runtimes but flexible allows any contain
 - IP based
 - HTTP Cookies (GOOGAPPUID, value from 0-999)
 - Random
+
+## App Engine Cron service
+
+App Engine cron service runs tasks at regular intervals or times.
