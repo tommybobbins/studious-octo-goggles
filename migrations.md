@@ -19,7 +19,7 @@ Where are you starting?
 
 Use the Cloud Adoption Framework.
 
-- Assess - scope and catlogue dependencies. Learn about GCP and build prototypes. TCO. Prioritize workload migrations.
+- Assess - scope and catlogue applications + dependencies. Learn about GCP and *build prototypes*. TCO. Prioritize workload migrations.
 - Plan -  Determine user and service identities, resource hierarchy. Groups and Roles. Network Topology. 
 - Deploy - Configuration management tools. Container orchestration. Deployment automation. IaC.
 - Optimize - Build and train team, monitor and automate everything. Codify everything. Use managed services. Reduce costs.
