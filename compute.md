@@ -28,7 +28,7 @@ Disks are listed for making instances stateful, on permanent instance deletion, 
 
 ### Unmanaged instance group
 
-Heterogeneous,  has no instance template, no autoscaling, no rolling update support and is generally associated with legacy clusters. Does support load balancing.
+Heterogeneous (can be different configurations),  has no instance template, no autoscaling, no rolling update support and is generally associated with legacy clusters. Does support load balancing.
 
 ### Confidential VM Overview and Security Features
 
