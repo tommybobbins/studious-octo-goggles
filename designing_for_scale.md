@@ -109,3 +109,8 @@ Do not use IP Forwarding.
 - Test DR procedures.
 - Use chaos engineering.
 - Plan for incident response.
+
+# Load Shedding and Client Throttling
+
+Load shedding is dropping data that exceeds the system's capacity to deal with it.
+Upstream Throttling is a client measuring the downstream response, then buffering requests so that they don't flood the backend.

@@ -59,8 +59,8 @@ Dynamic Routing modes
 ## VPN and IPSEC
 
 ## Cloud Interconnect
-  - Dedicated
-  - Partner
+  - Dedicated - 10/100Gbps.
+  - Partner - 50Mbps/10Gbps.
 
 ## Firewalls
 
@@ -97,6 +97,7 @@ Access Service provider in another VPC (e.g. your own API endpoints in another V
 
 ## Cloud VPN
 
+- 3 Gbps
 - Uses IPSec VPN, traffic is encrypted
 - Classic (99.9%, single IP, static or BGP) or HA VPN (99.99%, two external IPs, BGP only)
 
@@ -107,6 +108,7 @@ Access Service provider in another VPC (e.g. your own API endpoints in another V
 - Extends on premise network to Google Cloud
 - High availability, low latency.
 - Dedicated and Partner.
+- 10/100Gbps
 
 Dedicated is a direct physical connection between on-prem and Google's network. Large volume of data. Typically less expensive than purchasing more bandwidth. It is hosted in a common co-location facility where Google has a presence.
 
@@ -114,7 +116,7 @@ Partner interconnect - telecom provider has connection to colo, allows on-premis
 
 ## Direct Peering
 
-Peering connection between your network and Google's network. Exists outside of Google Cloud. Is often used when accessing Google workspace applications. Recommended way to connect to Google Cloud is with a Dedicated Interconnect or Partner Interconnect not using Direct Peering.
+Peering connection between your network and Google's network. Exists outside of Google Cloud. Is often used when accessing Google workspace applications. Recommended way to connect to Google Cloud is with a Dedicated Interconnect or Partner Interconnect not using Direct Peering. BGP
 
 ## Cloud CDN
 
