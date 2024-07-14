@@ -4,6 +4,7 @@ Google Cloud Certified Professional Cloud Architect Study Notes
 ## TOPICS
 
 - [Anthos](anthos.md) - Global cross cloud/premise scaling for Kubernetes clusters.
+- [Apigee](apigee.md) - API Proxy
 - [App Engine & Cloud Run](app_engine.md)
 - [Compute](compute.md)
 - [Cloud Run](cloud_run.md)
