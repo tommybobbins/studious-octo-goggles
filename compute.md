@@ -35,7 +35,10 @@ Heterogeneous (can be different configurations),  has no instance template, no a
 Memory encrypted with keys which reside in dedicated hardware, not available to the hypervisor.
 Attestation - verify the state of the VM to ensure key componenents haven't been tampered with.
 Known as _Trusted Execution Environment_
-Can also use Shielded VMs - Secure Boot [], TPM (Measured Boot) [], Integrity monitoring.
+Can also use Shielded VMs 
+- Secure Boot.
+- TPM (Measured Boot).
+- Integrity monitoring.
 
 ### Ops Agent on VM Instances
 
