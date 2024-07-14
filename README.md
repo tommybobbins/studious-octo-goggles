@@ -6,6 +6,7 @@ Google Cloud Certified Professional Cloud Architect Study Notes
 - [Anthos](anthos.md) - Global cross cloud/premise scaling for Kubernetes clusters.
 - [App Engine & Cloud Run](app_engine.md)
 - [Compute](compute.md)
+- [Cloud Run](cloud_run.md)
 - [Kubernetes](kubernetes.md)
 - [Organisations](org.md)
 - [Data Storage](data.md)
